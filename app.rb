@@ -8,8 +8,7 @@ class App < Sinatra::Base
 
   post '/piglatinize' do
     word = params[:user_phrase]
-    value = PigLatinizer.new
-      output = value.piglatinize(word)
+      output = PigLatinizer.new.piglatinize(word)
     "#{output}"
   end
 
